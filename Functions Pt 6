@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+//after applying & in formal parmeter we are abel to change the actual parmeter values
+// int swap(int a, int b){
+int swap(int &a, int &b){
+  int temp;
+  temp = a;
+  a = b;
+  b = temp;
+  cout<<"The values are:"<<a<<" "<<b<<endl;
+  return 0;
+}
+//passing by reference 
+int main(){
+  int a,b;
+  cin>>a>>b;
+  swap(a,  b);
+  cout<<"The values are:"<<a<<" "<<b<<endl;
+  return 0;
+}
